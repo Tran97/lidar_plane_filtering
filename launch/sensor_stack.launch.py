@@ -22,6 +22,14 @@ def generate_launch_description():
         executable='imu_data_converter',
         name='imu_data_converter'
     )
+    
+    # imu_complementary_filter node
+    imu_complementary_filter_node = Node(
+        package='imu_complementary_filter',
+        executable='complementary_filter_node',
+        name='complementary_filter_node'
+        # Add any additional arguments or parameters here
+    ) 
 
     orientation_tf_node = Node(
         package=package_name,
@@ -29,6 +37,12 @@ def generate_launch_description():
         name='orientation_tf'
     )
 
+    #lidar_tf_node = Node(
+        #package=package_name,
+        #executable='lidar_tf',
+        #name='lidar_tf'
+    #)
+    
     plane_filter_node = Node(
         package=package_name,
         executable='plane_filter',
@@ -53,5 +67,7 @@ def generate_launch_description():
         robot_state_publisher,
         imu_data_converter_node,
         orientation_tf_node,
+        #lidar_tf_node,
+        imu_complementary_filter_node,
         rviz_node
     ])

@@ -29,7 +29,8 @@ setup(
             'imu_data_converter = lidar_plane_filtering.imu_converter:main',
             'plane_filter = lidar_plane_filtering.plane_filter:main',
             'pc2 = lidar_plane_filtering.pc2_test:main',
-            'orientation_tf = lidar_plane_filtering.orientation_tf:main'
+            'orientation_tf = lidar_plane_filtering.orientation_tf:main',
+            'lidar_tf = lidar_plane_filtering.lidar_tf:main',
         ],
     },
 )
