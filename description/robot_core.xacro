@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <xacro:include filename="inertial_macros.xacro"/>
+
+    <!-- BASE LINK -->
+
+    <link name="base_link">
+
+    </link>
+
+
+
+    <!-- Joint connecting base_link to mpu_link -->
+    <joint name="base_to_mpu" type="fixed">
+        <parent link="base_link"/>
+        <child link="mpu_link"/>
+        <origin xyz="0 0 1" rpy="0 0 0"/>
+    </joint>
+
+    <!-- MPU -->
+    <link name="mpu_link">
+        <visual>
+        <!-- Visual representation of the MPU -->
+        </visual>
+        <collision>
+        <!-- Collision model of the MPU -->
+        </collision>
+        <inertial>
+        <!-- Inertial properties of the MPU -->
+        </inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </link>
+
+</robot>
