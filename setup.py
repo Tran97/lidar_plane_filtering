@@ -31,6 +31,7 @@ setup(
             'pc2 = lidar_plane_filtering.pc2_test:main',
             'orientation_tf = lidar_plane_filtering.orientation_tf:main',
             'lidar_tf = lidar_plane_filtering.lidar_tf:main',
+            'lidar_tf_2 = lidar_plane_filtering.lidar_tf_2:main',
         ],
     },
 )
