@@ -39,8 +39,8 @@ def generate_launch_description():
 
     lidar_tf_node = Node(
         package=package_name,
-        executable='lidar_tf_2',
-        name='lidar_tf_2'
+        executable='lidar_tf',
+        name='lidar_tf'
     )
     
     plane_filter_node = Node(
