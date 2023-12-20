@@ -14,6 +14,7 @@ setup(
         (os.path.join('share', package_name), ['package.xml']),
         # Include all launch files.
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*.launch.py'))),
+        (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*.launch'))),
         (os.path.join('share', package_name, 'description'), glob(os.path.join('description', '*.xacro'))),
         (os.path.join('share', package_name, 'config'), glob(os.path.join('config', '*'))),
     ],
@@ -28,10 +29,9 @@ setup(
         'console_scripts': [
             'imu_data_converter = lidar_plane_filtering.imu_converter:main',
             'plane_filter = lidar_plane_filtering.plane_filter:main',
-            'pc2 = lidar_plane_filtering.pc2_test:main',
             'orientation_tf = lidar_plane_filtering.orientation_tf:main',
             'lidar_tf = lidar_plane_filtering.lidar_tf:main',
-            'lidar_tf_2 = lidar_plane_filtering.lidar_tf_2:main',
+            'pc2 = lidar_plane_filtering.pc2_test:main',
         ],
     },
 )

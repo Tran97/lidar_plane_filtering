@@ -45,8 +45,8 @@ class MPUTfPublisher(Node):
 
             # Publish the transformation
             self.tf_broadcaster.sendTransform(transform)
-            self.get_logger().info('Transform published')
-            self.get_logger().info(f'Translation: {translation}, Rotation: {rotation}')
+            #self.get_logger().info('Transform published')
+            #self.get_logger().info(f'Translation: {translation}, Rotation: {rotation}')
 
 def main(args=None):
     rclpy.init(args=args)
